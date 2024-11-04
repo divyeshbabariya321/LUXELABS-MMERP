@@ -44,7 +44,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.env
 vendor.zip
 cronjob.php
 cronjob-magecontroller.php
