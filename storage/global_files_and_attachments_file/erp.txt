@@ -1,0 +1,27 @@
+ERP Token : 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
+
+
+mysql -u root -p < C:/Users/Admin/Downloads/erp_live_new_2023_2023-12-16.sql
+
+
+- php artisan migrate --path=/database/migrations/2023_09_06_163430_create_zoom_meeting_participants_table.php
+- php artisan migrate --path=/database/migrations/2023_09_07_113445_add_new_columns_in_zoom_meeting_participants_table.php
+- php artisan migrate --path=/database/migrations/2023_09_13_142106_add_two_extra_columns_in_zoom_meeting_participants_table.php
+- php artisan migrate --path=/database/migrations/2023_09_18_163851_add_recording_path_to_zoom_meeting_participants_table.php
+- php artisan migrate --path=/database/migrations/2023_09_20_162640_add_recording_id_in_zoom_meeting_participants_table.php
+- php artisan migrate --path=/database/migrations/2023_09_21_111039_add_description_in_zoom_meeting_participants_table.php
+- php artisan migrate --path=/database/migrations/2023_10_16_091617_add_deleted_at_to_todo_lists_table.php         
+
+
+skiles.brook@example.org / pass1234
+
+
+global component
+
+php artisan make:migration create_global_files_and_attachments
+
+php artisan migrate --path=/database/migrations/2023_12_18_111553_global_files_and_attachments.php
+
+
+skiles.brook@example.org
+pass1234
