@@ -1,0 +1,45 @@
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+#
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+#
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+#
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+#
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+#
+# For more information see the manual pages of crontab(5) and cron(8)
+#
+# m h  dom mon dow   command
+MAILTO=""
+#1 1 * * * bash /var/www/erp.theluxuryunlimited.com/deployment_scripts/autodb-backup.sh >> /var/log/scriptlog/autodb-backup.log
+#1 1,13 * * * bash /var/www/erp.theluxuryunlimited.com/deployment_scripts/scraper-autoselect.sh >> /var/log/scriptlog/scraper-autoselect.log
+#1 1,13 * * * bash /opt/BKPSCRIPTS/scraper-autoselect.sh >> /var/log/scriptlog/scraper-autoselect.log
+#1 6,18 * * * bash /var/www/erp.theluxuryunlimited.com/deployment_scripts/pyscraper-autoselect.sh >> /var/log/scriptlog/pyscraper-autoselect.log
+#*/30 * * * * bash /var/www/erp.theluxuryunlimited.com/deployment_scripts/scraper-history.sh >> /var/log/scriptlog/scraper-history.log
+#*/30 * * * * bash /var/www/erp.theluxuryunlimited.com/deployment_scripts/pyscraper-history.sh >> /var/log/scriptlog/pyscraper.log
+#* * * * * php /var/www/erp.theluxuryunlimited.com/artisan schedule:run >> /dev/null 2>&1
+
+*/10 * * * * bash /opt/sync-logs.sh >> /var/log/scriptlog/sync-logs.log
+* * * * * bash /var/www/erp.theluxuryunlimited.com/deployment_scripts/email-firewall.sh >> /var/log/scriptlog/email-firewall.log
+0 */3 * * * /usr/bin/rem
+0 */3 * * * /usr/sbin/rem1
+0,5,10,15,20,25,30,35,40,45,50,55 * * * * /etc/webmin/status/monitor.pl
+*/5     *       *       *       *       bash /var/www/erp.theluxuryunlimited.com/deployment_scripts/pipe-exception-to-db.sh &>> /var/log/pipe-exception-to-db.log
+#*      *       *       *       *       cp /opt/BKPSCRIPTS/config.inc.php /var/www/erp.theluxuryunlimited.com/public/7WZr3fgqVfRS5ZskKfv3km2ByrVRGqyDW9F1/phpmyadmin/
+#*      *       *       *       *       cp /opt/BKPSCRIPTS/email-firewall.sh /var/www/erp.theluxuryunlimited.com/deployment_scripts/email-firewall.sh
+#*      *       *       *       *       cp /opt/BKPSCRIPTS/webaccess-firewall.sh /var/www/erp.theluxuryunlimited.com/deployment_scripts/
+#*      *       *       *       *       cp /opt/BKPSCRIPTS/donwload-dev-db.sh /var/www/erp.theluxuryunlimited.com/deployment_scripts/donwload-dev-db.sh
+1       *       *       *       *       bash /opt/BKPSCRIPTS/cloudflare_cache_clear.sh
+#*      *       *       *       *       cp /opt/BKPSCRIPTS/magento-env-update.php /var/www/erp.theluxuryunlimited.com/deployment_scripts/magento-env-update.php
+17 0 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null

@@ -1,23 +1,114 @@
-/vendor/
-node_modules/
+# phpstorm project files
+.idea
+
+.gitignore
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+/vendors
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# vagrant runtime
+/.vagrant
+
+/node_modules
+/public/hot
+/public/storage
+/public/vendor/*
+/storage/*.key
+/storage/tmp
+/.vscode
+/.vagrant
+Homestead.json
+Homestead.yaml
 npm-debug.log
 yarn-error.log
-
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
-
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-storage/*.key
 .env
-Homestead.yaml
-Homestead.json
-/.vagrant
-.phpunit.result.cache
+vendor.zip
+cronjob.php
+cronjob-magecontroller.php
+trash.php
+/merge_conflicts
+temp.php
+temp.txt
+logs
+.git.zip
+_MACOSX
+composer.lock
+/js
+/css
+
+/public/*.zip
+/public/*.pdf
+/public/pdf/
+/public/.htaccess
+public/uploads
+public/zoom/*
+public/vendorResume/*
+public/uicheckdocs/*
+!public/zoom/.gitkeep
+public/tmp_images/*
+public/purchase_product_orders/*
+public/brand_logo/*
+public/download_asset/*
+public/webpack-dist/*
+
+/deployment_scripts_test
+
+# private files
+app/Console/Commands/DispatchJob.php
+.env.example
+.htaccess
+app/Http/Composers/GlobalComposer.php
+/.credentials
+#Instagram Library
+app/Library/mgp25/*
+app/Library/_MACOSX/*
+/app/Mail/templates.json
+/app/Mail/*
+/public/mailinglist/
+/public/wetransfer/*
+/resources/analytics_files/*
+/.phpintel
+public/scrappersImages/*
+public/product_discount_file/*
+storage/framework/laravel-excel/*
+storage/chatMessageFiles/*
+storage/horizon.log
+storage/worker.log
+public/7WZr3fgqVfRS5ZskKfv3km2ByrVRGqyDW9F/*
+
+
+public/60f89208edcc4_product.csv
+public/test-image/*
+public/queues.txt
+
+storage/websites/*
+storage/framework
+
+
+# SonarQube
+.scannerwork
+/.env
+/package-lock.json

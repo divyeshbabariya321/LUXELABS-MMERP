@@ -1,0 +1,42 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2 &
+      - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - docker --version
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 339712982862.dkr.ecr.us-east-1.amazonaws.com     
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
+      - echo "$COMMIT_HASH >>> $IMAGE_TAG"
+      - pwd
+      - curl https://checkip.amazonaws.com/
+      - mv .env.codebuild .env
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Composer commands...
+      - cd ../ && docker run --rm -v $(pwd)/erp:/var/www --entrypoint composer -t 339712982862.dkr.ecr.us-east-1.amazonaws.com/mmerp/base install --prefer-dist --no-dev -o
+      - mv ./erp/prod.Dockerfile ./prod.Dockerfile
+      - rm -rf ./erp/.git && mv ./erp/.env ./.env
+      - pwd
+      - ls -al
+      - docker build -f ./prod.Dockerfile -t mmerp/erp-app .
+      - echo "Run migration"
+      - docker run --rm -v $(pwd)/.env:/var/www/.env --entrypoint /entrypoint.sh -t mmerp/erp-app ERP_MIGRATION
+     # - docker run --rm -v $(pwd)/.env:/var/www/.env --entrypoint /entrypoint.sh -t php artisan migrate --path=/database/migrations/2024_02_26_033855_add_email_alert_to_routes.php
+     # - docker run --rm -v $(pwd)/.env:/var/www/.env --entrypoint /entrypoint.sh -t mmerp/erp-app migrate --path=/var/www/database/migrations/2024_02_26_033855_add_email_alert_to_routes.php
+      - docker run --rm -v $(pwd)/.env:/var/www/.env --entrypoint /entrypoint.sh -t mmerp/erp-app artisan clear:all
+      - docker tag mmerp/erp-app:latest 339712982862.dkr.ecr.us-east-1.amazonaws.com/mmerp/erp-app:$CODEBUILD_SOURCE_VERSION
+      - docker push 339712982862.dkr.ecr.us-east-1.amazonaws.com/mmerp/erp-app:$CODEBUILD_SOURCE_VERSION
+      - docker tag mmerp/erp-app:latest 339712982862.dkr.ecr.us-east-1.amazonaws.com/mmerp/erp-app:prod
+      - docker push 339712982862.dkr.ecr.us-east-1.amazonaws.com/mmerp/erp-app:prod
+      - aws ecs update-service --cluster erp-prod --service erp-app --force-new-deploy
+      - echo Build completed on `date`
+      - pwd
+      - echo Deploying services
+      - ./erp/deployment_scripts/ecs-deployment.sh
