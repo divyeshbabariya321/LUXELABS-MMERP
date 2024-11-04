@@ -1,0 +1,108 @@
+.tickets .btn-group-xs>.btn, .btn-xs {
+    padding: 1px 2px !important;
+    font-size: 15px !important;
+}
+.tickets .select2-container .select2-selection--single{
+    height: 32px !important;
+    border: 1px solid #ddd !important;
+    color: #757575;
+    padding-left: 6px;
+}
+.tickets .select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 32px !important;
+}
+.tickets .select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 32px !important;
+    color: #757575;
+}
+.tickets>tbody>tr>td, .tickets>tbody>tr>th, .tickets>tfoot>tr>td, .tickets>tfoot>tr>th, .tickets>thead>tr>td, .tickets>thead>tr>th{
+    padding: 6px !important;
+}
+
+.tickets .page-heading{
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+}
+.form-control{
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+}
+.row.tickets .form-group input{
+    font-size: 13px;
+    height: 32px;
+}
+.container.container-grow{
+    padding:0 !important;
+}
+#quick-sidebar{
+    padding-top:0 !important;
+}
+#quick-sidebar .fa-2x {
+    font-size: 1.4em;
+    margin-bottom: 0;
+    height: auto !important;
+}
+#quick-sidebar {
+    min-width: 35px !important;
+    max-width: 30px !important;
+    margin-left: 0px !important;
+}
+.container.container-grow {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.flex{
+    display: flex;
+}
+.list-unstyled.components li{
+    padding:8px 6px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+}
+.list-unstyled.components li:hover{
+    background: #dddddd78;
+}
+#quick-sidebar a{
+    text-align: center;
+}
+.list-unstyled.components{
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-left: 1px solid #ddd;
+    border-radius: 4px;
+}
+.navbar-laravel{
+    box-shadow: none !important;
+}
+.space-right{
+    padding-right:10px;
+    padding-left: 10px;
+}
+.row.tickets{
+    font-size: 13px !important;
+}
+td{
+    padding: 5px !important;
+}
+td a{
+    color: #2f2f2f;
+}
+tbody td{
+    background: #ddd3;
+}
+.select2-container .select2-search--inline .select2-search__field{
+    margin-top: 0px !important;
+}
+.select2-search--inline {
+display: contents; /*this will make the container disappear, making the child the one who sets the width of the element*/
+}
+
+.select2-search__field:placeholder-shown {
+width: 100% !important; /*makes the placeholder to be 100% of the width while there are no options selected*/
+}

@@ -1,0 +1,60 @@
+.sticky_notes_container {
+  z-index: 99;
+  position: absolute;
+  background-color: #ddd;
+  width: 250px;
+  height: 340px;
+  font-size: 12px;
+  text-indent: 1px;
+  -webkit-box-shadow: 1px 1px 10px #888888;
+}
+
+.text_box {
+  width: 250px;
+  height: 235px;
+  background-color: #ddd;
+  margin-top: 1px;
+}
+
+.custom-textarea {
+  margin-left: 2px;
+  margin-top: 5px;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+  outline: none;
+}
+
+.index {
+  z-index: 5;
+}
+
+.check {
+  border: thin solid black;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  font-size: 13px;
+}
+.close {
+  border: thin solid black;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  font-size: 13px;
+}
+
+.icon-check {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-right: 7px;
+  gap: 5px;
+}
+
+.close-icon,
+.check-icon {
+  cursor: pointer;
+}

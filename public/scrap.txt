@@ -1,0 +1,8 @@
+laferramenta.js
+gb1.js
+gb2.js
+gb4.js
+gb9.js
+gisa.js
+helme.js
+indice.js

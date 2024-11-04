@@ -1,0 +1,86 @@
+.chat-bot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #dddddd9c;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-bot-header .user-img {
+  min-width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 45px;
+  margin-right: 10px;
+}
+.chat-bot-body {
+  background-color: #dddddd36;
+  padding: 10px;
+  min-height: 80vh;
+  max-height: 80vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.chat-message {
+  max-width: 80%;
+  width: fit-content;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
+
+.chat-message > p + p {
+  background-color: #fff;
+  padding: 2px 4px;
+  border-radius: 2px;
+  margin-bottom: 2px;
+}
+
+.chat-message.left-chat {
+  background-color: #dddddd7a;
+}
+
+.chat-message.left-chat p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.chat-message.right-chat {
+  background-color: #dddddd36;
+  margin-left: auto;
+}
+
+.chat-message p {
+  margin-bottom: 0;
+}
+
+.chat-bot-footer i {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.chat-bot-footer .form-control {
+  padding-right: 30px;
+}
+
+.intent-details select {
+  max-width: 200px;
+}
+
+.save-btn {
+  padding: 2px 8px;
+  margin-top: -15px;
+}
+
+.intent-details {
+  width: fit-content;
+}
+
+.get-type {
+  white-space: nowrap;
+}
