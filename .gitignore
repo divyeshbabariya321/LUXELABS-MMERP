@@ -77,7 +77,6 @@ public/webpack-dist/*
 
 # private files
 app/Console/Commands/DispatchJob.php
-.env.example
 .htaccess
 app/Http/Composers/GlobalComposer.php
 /.credentials
@@ -109,5 +108,5 @@ storage/framework
 
 # SonarQube
 .scannerwork
-/.env
+
 /package-lock.json
