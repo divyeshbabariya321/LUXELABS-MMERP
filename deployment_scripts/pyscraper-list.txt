@@ -1,0 +1,6 @@
+biffi_scraper
+coltorti_scraper
+coltorti_b2b_scraper
+gb_scraper
+tessabit_scraper
+bruna_rosso_b2b_scraper

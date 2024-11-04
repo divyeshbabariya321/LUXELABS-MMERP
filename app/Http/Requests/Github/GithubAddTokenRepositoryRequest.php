@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Http\Requests\Github;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class GithubAddTokenRepositoryRequest extends FormRequest
+{
+    /**
+     * Get the validation rules that apply to the request.
+     */
+    public function rules(): array
+    {
+        return [
+'github_repositories_id' => [
+                'required',
+            ],
+'github_type'            => [
+                'required',
+            ],
+'token_key'              => [
+                'required',
+            ],
+'expiry_date'            => [
+                'required',
+            ],
+];
+    }
+}

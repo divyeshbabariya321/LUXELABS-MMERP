@@ -1,0 +1,159 @@
+{
+  "2": {
+    "template_name": "WeeklyTest",
+    "template_slug": "weeklyTest",
+    "template_description": "Description",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "upsell"
+  },
+  "6": {
+    "template_name": "weeklyTest-2021-02-15-22357",
+    "template_slug": "weeklyTest2021021522357",
+    "template_description": "Description",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "upsell",
+    "template_dynamic": true
+  },
+  "7": {
+    "template_name": "weeklyTest-2021-02-15-76667",
+    "template_slug": "weeklyTest2021021576667",
+    "template_description": "Description",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "upsell",
+    "template_dynamic": true
+  },
+  "9": {
+    "template_name": "weeklyTest-2021-02-15-48901",
+    "template_slug": "weeklyTest2021021548901",
+    "template_description": "Description",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "upsell",
+    "template_dynamic": true
+  },
+  "10": {
+    "template_name": "weeklyTest-2021-02-15-96068",
+    "template_slug": "weeklyTest2021021596068",
+    "template_description": "Description",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "upsell",
+    "template_dynamic": true
+  },
+  "11": {
+    "template_name": "weeklyTest-2021-02-15-98906",
+    "template_slug": "weeklyTest2021021598906",
+    "template_description": "Description",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "upsell",
+    "template_dynamic": true
+  },
+  "12": {
+    "template_name": "OrderConfirmationDefault",
+    "template_slug": "orderConfirmationDefault",
+    "template_description": "Order confirmation default",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "welcome"
+  },
+  "13": {
+    "template_name": "InitializeReturnRequestDefault",
+    "template_slug": "initializeReturnRequestDefault",
+    "template_description": "InitializeReturnRequestDefault",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "activation"
+  },
+  "14": {
+    "template_name": "InitializeRefundRequetDefault",
+    "template_slug": "initializeRefundRequetDefault",
+    "template_description": "InitializeRefundRequetDefault",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "activation"
+  },
+  "15": {
+    "template_name": "InitializeExchangeRequestDefault",
+    "template_slug": "initializeExchangeRequestDefault",
+    "template_description": "InitializeExchangeRequestDefault",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "activation"
+  },
+  "16": {
+    "template_name": "StatusUpdateReturnRequest",
+    "template_slug": "statusUpdateReturnRequest",
+    "template_description": "StatusUpdateReturnRequest",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "activation"
+  },
+  "17": {
+    "template_name": "StatusUpdateRefundRequest",
+    "template_slug": "statusUpdateRefundRequest",
+    "template_description": "StatusUpdateRefundRequest",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "activation"
+  },
+  "18": {
+    "template_name": "StatusUpdateExchangeRequest",
+    "template_slug": "statusUpdateExchangeRequest",
+    "template_description": "StatusUpdateExchangeRequest",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "birthday"
+  },
+  "19": {
+    "template_name": "OrderStatusSimpleMail",
+    "template_slug": "orderStatusSimpleMail",
+    "template_description": "OrderStatusSimpleMail",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "birthday"
+  },
+  "20": {
+    "template_name": "OrderCancellationDefault",
+    "template_slug": "orderCancellationDefault",
+    "template_description": "OrderCancellationDefault",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "birthday"
+  },
+  "21": {
+    "template_name": "orderConfirmationDefault1",
+    "template_slug": "orderConfirmationDefault1",
+    "template_description": "orderConfirmationDefault1",
+    "template_type": "html",
+    "template_view_name": "mantra",
+    "template_skeleton": "birthday"
+  },
+  "22": {
+    "template_name": "issueCredit",
+    "template_slug": "issueCredit",
+    "template_description": "issueCredit",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "invite"
+  },
+  "23": {
+    "template_name": "issueCreditForSololuxury",
+    "template_slug": "issueCreditForSololuxury",
+    "template_description": "issueCreditForSololuxury",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "invite"
+  },
+  "24": {
+    "template_name": "testing for order",
+    "template_slug": "testingForOrder",
+    "template_description": "ordr status changes for creating",
+    "template_type": "html",
+    "template_view_name": "airmail",
+    "template_skeleton": "confirm"
+  }
+}

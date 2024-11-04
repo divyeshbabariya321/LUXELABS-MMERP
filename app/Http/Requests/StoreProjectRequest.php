@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class StoreProjectRequest extends FormRequest
+{
+    /**
+     * Get the validation rules that apply to the request.
+     */
+    public function rules(): array
+    {
+        return [
+'name'             => [
+                'required',
+            ],
+'project_type'     => [
+                'required',
+            ],
+'job_name'         => [
+                'required',
+            ],
+'store_website_id' => [
+                'required',
+            ],
+'serverenv'        => [
+                'required',
+            ],
+];
+    }
+}

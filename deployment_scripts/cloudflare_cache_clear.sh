@@ -1,0 +1,1 @@
+curl -X POST "https://api.cloudflare.com/client/v4/zones/350f8c00b0e5e10be389d1dfc71c0bca/purge_cache"  -H "X-Auth-Email: jamesadolf1970@icloud.com"  -H "X-Auth-Key: 8a7d877c26137c59bb6929cf004aca8a33599"  -H "Content-Type: application/json" --data '{"purge_everything": true}'
